@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0024)http://www.hkvvlove.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>VVLOVE</title>
+<meta name="keywords" content="VVLOVE">
+<meta name="description" content="VVLOVE">
+<link href="./VVLOVE_files/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./VVLOVE_files/jquery2.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$('#SNS_icon a').tipsy();
+
+    var height = $(window).height() - 144;
+	var showHeight = height > 684 ? 684 : height;
+	$('#full_show').css('height', showHeight);
+
+	$('#index_block_thumb dd').hover(function(){
+		$(this).find('.markFFF').stop(true, true).animate({'opacity':0}, 200);
+		$(this).find('.info').stop(true, true).animate({'padding-left':40, 'padding-right':40}, 200);
+	}, function(){
+		$(this).find('.markFFF').stop(true, true).animate({'opacity':0.6}, 200);
+		$(this).find('.info').stop(true, true).animate({'padding-left':0, 'padding-right':0}, 200);
+	});
+
+	$('#slider li').eq(0).show();
+	var lenThumb = $('#slider li').length;
+	for(var i=1;i<=lenThumb;i++){
+		$('#num').append('<span>'+i+'</span>');
+	}
+	$('#num span').eq(0).addClass('on');
+	var len = $('#num span').length;
+	var index = 0;
+	$('#num span').click(function(){
+		index = $('#num span').index(this);
+		picShow(index);
+	});
+	var playPic = setInterval(function(){
+		picShow(index);
+		index++;
+		if(index==len){index=0}
+	},3000);
+	function picShow(i){
+		$('#slider li').eq(i).stop(true,true).fadeIn().siblings().fadeOut();
+		$('#num > span').eq(i).addClass('on').siblings().removeClass('on');
+	}
+});
+function subform(){
+	var id_name = $('#id_name');
+	var id_mail = $('#id_mail');
+	var id_text = $('#id_text');
+	if($.trim(id_name.val()) == '' || $.trim(id_name.val()) == 'Name'){
+		$('#tips').html('请留下您的姓名，谢谢！');
+		id_name.focus();
+		return false;
+	}
+	if($.trim(id_mail.val()) == '' || $.trim(id_mail.val()) == 'E-mail'){
+		$('#tips').html('请留下您的邮箱，谢谢！');
+		id_mail.focus();
+		return false;
+	}
+	if($.trim(id_text.val()) == ''){
+		$('#tips').html('不说点儿什么吗？');
+		id_text.focus();
+		return false;
+	}
+}
+</script>
+<link rel="stylesheet" type="text/css" id="TQCSS0.7804812032263726" href="./VVLOVE_files/style(1).css">
+
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+<!-- <script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script> -->
+</head>
+
+<body screen_capture_injected="true">
+
+<a name="top"></a>
+<div class="head">
+	<div class="w_auto">
+    	<div class="logo"><a href=""><img src='images/logo.png' /></a></div>
+    	<div class="nav font-yh" style='font-size:14px;padding-right:0px;'> &nbsp;&nbsp;0755-26949997</div>
+    	<div class="nav font-yh">
+        <a href="index.html" class="menu_nav">首页</a>/
+        <a href="about.html" class="menu_nav ">关于木川</a>/
+        <a href="wedding.html" class="menu_nav ">木川婚礼</a>/
+        <a href="weddingschool.html" class="menu_nav ">婚礼学堂</a>/
+        <a href="contact.html" class="menu_nav " style='padding-right:20px;'>联系我们</a>
+        <a href="#" target="_blank" class="weibo"></a>
+
+        </div>
+
+    </div>
+</div>
+<div  class="bann" style="height:684px;">
+	<ul id="slider">
+                <li style="background-image: url('images/banner/top1.jpg'); width: 100%; height: 684px; display: none; background-position: 50% 0%; background-repeat: initial initial;"></li>
+                <li style="background-image: url('images/banner/top2.jpg'); width: 100%; height: 684px; display: none; background-position: 50% 0%; background-repeat: initial initial;"></li>
+                <li style="background-image: url('images/banner/top3.jpg'); width: 100%; height: 684px; display: list-item; background-position: 50% 0%; background-repeat: initial initial;"></li>
+                <li style="background-image: url('images/banner/top4.jpg'); width: 100%; height: 684px; display: none; background-position: 50% 0%; background-repeat: initial initial;"></li>
+                
+    </ul>
+	<div id="num" class="num"></div>
+</div>
+
+<div class="index_block_desc">
+    <div class="logo"></div>
+	<dl>
+	<dd><h2>木川婚礼<span>·</span>倾心打造</h2>
+    <p> 我们是木川婚礼定制中心<br>
+		我们致力于服务定制主题婚礼<br>
+		我们曾为许多新人实现了美好的婚礼梦想<br>
+		也期盼为更多的新人创造最美的爱情殿堂<br>
+		将您的婚礼刻画成人生历程中最珍贵的记忆<br>
+		是我们工作中最重要的使命
+	</p>
+    </dd>
+
+	<dd><h2>私属<span>.</span>定制<span>.</span>品质</h2>
+	    <p>木川聆听您的故事，分析您的需求<br>
+		您的心愿是木川策划婚礼的最佳路径<br>
+		木川谨记结婚是您此生最重要的一天<br>
+		婚礼每个细节都是是木川最重视的点<br>
+		木川用心打造每一场婚礼<br>
+		让新人在婚礼上一一打开许愿墙上的幸福锦盒
+		</p>
+	</dd>
+	<dd><h2>口碑高于一切</h2>
+    <p>完美的婚礼现场<br>
+	新人幸福的笑容<br>
+	我们以客户的满意作为衡量成功的标准<br>
+	客户满意是木川衡量品质的最高标准<br>
+	以专业的服务与绝佳的出品获得客户的信任</br>
+	是木川婚礼的品牌信念
+	</p>
+    </dd>
+    </dl>
+</div>
+
+<div id="index_block_thumb" class="index_block_thumb font-yh">
+	<dl>
+    	<dd class="t1" >
+    	<span class="markFFF" style="opacity: 0.6;"></span>
+    	<div class="w_auto">
+    	<div class="info" style="padding-left: 0px; padding-right: 0px;">
+    	<h1 class="title">给点的颜色瞧瞧</h1>
+    	<p>爱之于细节，爱的表达是一个眼神、一个动作、一杯清茶、一句话，是隐藏在生活在的每一个细枝末节。<br />我们倾听和了解，与您一同探寻爱的表达，让婚礼的每一个细节都是在讲述你们的爱情故事。</p>
+    	</div>
+    	</div>
+    	</dd>
+    	<dd class="t2" onclick="location.href=&#39;index.php?ac=article&amp;at=read&amp;did=373&#39;">
+	    	<span class="markFFF" style="opacity: 0.6;"></span>
+	    	<div class="w_auto">
+		    	<div class="info" style="padding-left: 0px; padding-right: 0px;"><h1 class="title">让幸福像花儿一样绽放</h1>
+		    		<p>人生旅程中最重要的一刻，有我们陪伴在您身边，聆听您的需求，给您建议，为您安排您所需要的一切。<br />在这一天，有木川在，您只需要安心地享受人生中最幸福的时刻。</p>
+		    	</div>
+	    	</div>
+    	</dd>
+    	<dd class="t3">
+	    	<span class="markFFF"></span>
+	    	<div class="w_auto">
+		    	<div class="info">
+			    	<h1 class="title">来自爱的源泉</h1>
+			    	<p>婚礼是新人的专属回忆，木川以想象力为翅膀，带上您的爱情，摘取创意的锦囊，为您创造最独特的婚礼。</p>
+		    	</div>
+	    	</div>
+    	</dd>
+    </dl>
+</div>
+
+<div class="index_news w_auto font-yh">
+	<dl>
+    	<dt>
+    		<a href="#">News</a>
+    		</dt>
+            	<dd class="dd1">
+	            	<div class="thumb">
+		            	<a href="#">
+		            		<img src="images/thumb/4.jpg" alt="2013婚纱照流行趋势全面解析" title="2013婚纱照流行趋势全面解析" width="157" height="105">
+		            	</a>
+	            	</div>
+	            	<div class="info">
+		            	<h1>
+		            		<a title="2013婚纱照流行趋势全面解析" href="#">完美婚礼最重要的九个步骤</a>
+		            	</h1>
+	            	<p>怎样开始筹划你的婚礼？无论你梦想着拥有如童话般美妙的婚礼，还是想用当今最时尚的方式进行，我们都将使你保持平静，微笑着步入婚礼殿堂。想策划一场不留遗憾的婚礼吗？现...</p>
+	            	</div>
+            	</dd>
+                <dd class="dd2">
+	                <div class="thumb">
+	                	<a href="http://www.hkvvlove.com/news/376.html">
+	                		<img src="images/thumb/1.jpg" alt="2013中国婚庆行业发展趋势分析" title="2013中国婚庆行业发展趋势分析" width="157" height="105">
+	                	</a>
+	                </div>
+	                <div class="info">
+		                <h1>
+		                	<a title="婚纱走步小课堂" href="http://www.hkvvlove.com/news/376.html">婚纱走步小课堂</a>
+		                </h1>
+	                	<p>如果您还对婚礼的种种仪态和礼仪摸不着头脑， 就请跟随我们走进婚纱走步小课堂吧。 新娘穿着有衬裙和无衬裙两种婚纱时不同的走步法，新娘新郎的步伐配合...</p>
+	                </div>
+                </dd>
+                <dd class="dd3">
+                	<div class="thumb">
+                		<a href="http://www.hkvvlove.com/news/378.html">
+                			<img src="images/thumb/2.jpg" alt="“模范情侣”陈豪与陈茵媺三年恋情终于“修成正果”" title="“模范情侣”陈豪与陈茵媺三年恋情终于“修成正果”" width="157" height="105">
+                		</a>
+                	</div>
+                	<div class="info">
+	                	<h1>
+	                		<a title="“模范情侣”陈豪与陈茵媺三年恋情终于“修成正果”" href="http://www.hkvvlove.com/news/378.html">“男伴娘，女伴郎”</a>
+	                	</h1>
+	                	<p>其实，伴娘不一定必须是女性,伴郎也不一定是男人。 所谓的“伴娘”其实是指陪伴新娘的人，而“伴郎”是陪伴新郎的人。如果新娘的好友是位男性，不要让伴娘这个“娘”字就把...</p>
+					</div>
+				</dd>
+                <dd class="dd4">
+                	<div class="thumb">
+                		<a href="http://www.hkvvlove.com/news/335.html">
+                		<img src="images/thumb/3.jpg" alt="木川婚礼国际中国官网全新改版上线啦！" title="V V LOVE婚礼国际中国官网全新改版上线啦！" width="157" height="105">
+                		</a>
+                	</div>
+                	<div class="info">
+                		<h1><a  href="http://www.hkvvlove.com/news/335.html">如何做婚前护肤</a></h1>
+                		<p>最好是提前3—6月做皮肤护理。在做护理之前，先让美容师测试你的肤质，然后告知美容师婚期， 让美容师制定一套专属的新娘套餐，循序渐进的改善肤质。...</p>
+					</div>
+			</dd>
+                
+    </dl>
+</div>
+
+<div class="footer">
+	<a href="http://www.hkvvlove.com/#top" class="top">TOP</a>
+	<div class="w_auto">
+	<div class="infos">
+    	<div id="SNS_icon" class="sns_icon">
+        	<a href="javascript:;" original-title="欢迎加入我们的微信：SZVV-LOVE" class="wx"></a><a href="http://weibo.com/vvlovewed" target="_blank" class="wb" original-title=""></a><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1987648729&site=qq&menu=yes" class="qq" original-title=""></a>
+        </div>
+    	<p class="weixin">微信扫描二维码<br>分享VVLOVE信息</p>
+    	<p class="tels">+(86) 0755-26949997</p>
+    	<p class="links">友情链接：<a title="华仕尊城设计" target="_blank" href="http://www.w-vi.com/">华仕尊城设计</a></p>
+    </div>
+    <div class="form">
+    	<div id="tips" class="tips font-yh"></div>
+    	<div class="i1"><input type="text" id="id_name" class="text t1" onfocus="if(this.value==defaultValue)this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;)this.value=defaultValue" value="Name"><input type="text" class="text" value="E-mail" id="id_mail" onfocus="if(this.value==defaultValue)this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;)this.value=defaultValue"></div>
+        <textarea class="areatext" id="id_text"></textarea>
+        <input type="button" onclick="subform()" class="btn" value="提交">
+    </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="cpy">
+<p>©2013 木川婚礼定制, INC. ALL RIGHTS RESERVED. TERMS OF SERVICE &amp; PRIVACY POLICY.</p>
+</div>
+<script src="./VVLOVE_files/all_20100501.js"></script><script id="TQGetrequestUser_JS"></script>
+<script src="./VVLOVE_files/as.js"></script><object id="tq_as" name="tq_as" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1"><param name="movie" value="http://sysimages.tq.cn/js/vip/shareObject.swf"><param name="allowScriptAccess" value="always"><object id="tq_as2" name="tq_as2" type="application/x-shockwave-flash" data="http://sysimages.tq.cn/js/vip/shareObject.swf" width="1" height="1"><param name="allowScriptAccess" value="always"></object></object>
+
+
+<embed src="http://www.hkvvlove.com/web_file/background-music.mp3" autostart="true" loop="true" hidden="true">
+
+</body></html>
